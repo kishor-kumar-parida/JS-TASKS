@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-7</title>
+</head>
+
+<body>
+    <div>
+        <label for="first">1st Number :</label>
+        <input type="text" name="first" id="first">
+
+        <br><br>
+
+        <label for="second">2nd Number :</label>
+        <input type="text" name="second" id="second">
+
+        <br><br>
+
+        <button onclick="mul()">Multiply</button>
+        <button onclick="div()">Divide</button>
+
+        <p>The Result Is :</p>
+        <p id="demo"></p>
+
+    </div>
+</body>
+
+<script>
+    function mul() {
+        var a = parseInt(document.getElementById('first').value);
+        var b = parseInt(document.getElementById('second').value);
+        document.getElementById('demo').innerHTML = (a * b);
+    }
+
+    function div() {
+        var a = parseInt(document.getElementById('first').value);
+        var b = parseInt(document.getElementById('second').value);
+        document.getElementById('demo').innerHTML = (a / b);
+    }
+</script>
+
+</html>

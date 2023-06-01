@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-11</title>
+
+    <style>
+        .top {
+            width: 50%;
+            height: 90vh;
+            background: linear-gradient(#e66465, #9198e5);
+            padding: 10px 0 0 100px;
+            line-height: 1.7;
+        }
+
+        h2 {
+            padding-left: 240px;
+            color: blue;
+        }
+
+        button {
+            margin-left: 285px;
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            border: 3px solid black;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        p {
+            margin-left: 350px;
+        }
+
+        .a {
+            font-weight: bold;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .b {
+            width: 353px;
+        }
+
+        .c {
+            padding-left: 10px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="top">
+            <h2>Registration form</h2>
+            <table>
+                <tr>
+                    <td class="a"><label for="fname">First Name</label></td>
+                    <td><input class="b" type="text" id="fname"></td>
+                    <td id="fname1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="lname">Last Name</label></td>
+                    <td>
+                        <input class="b" type="text" id="lname">
+                    </td>
+                    <td id="lname1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="email">Email</label></td>
+                    <td>
+                        <input class="b" type="email" id="email">
+                    </td>
+                    <td id="email1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="password">Password</label></td>
+                    <td>
+                        <input class="b" type="password" id="password">
+                    </td>
+                    <td id="pass1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="password1">Re-enter Password</label></td>
+                    <td>
+                        <input class="b" type="password" id="password1">
+                    </td>
+                    <td id="repass1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a">
+                        <label for="gender">Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" checked="checked">
+                        <label for="male">Male</label>
+
+                        <br>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="age">Age</label></td>
+                    <td>
+                        <input class="b" type="text" id="age">
+                    </td>
+                    <td id="age1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="phone">Phone Number</label></td>
+                    <td>
+                        <input class="b" type="text" id="phone">
+                    </td>
+                    <td id="phone1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a">
+                        <label for="address">Address</label>
+                    </td>
+                    <td><textarea name="address" id="address" cols="46" rows="5"></textarea>
+                    </td>
+                    <td id="address1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="state">State</label></td>
+                    <td>
+                        <input class="b" type="text" id="state">
+                    </td>
+                    <td id="state1" class="c"></td>
+                </tr>
+
+                <tr>
+                    <td class="a">
+                        <label for="country">Country</label>
+                    </td>
+                    <td>
+                        <select name="country" id="country">
+                            <option selected>Choose your country</option>
+                            <option value="eng">India</option>
+                            <option value="hindi">India</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="a"><label for="lang">Language Known</label></td>
+                    <td>
+                        <input type="checkbox" id="eng" name="eng" value="English">
+                        <label for="eng">English</label>
+                        <input type="checkbox" id="kannada" name="kannada" value="kannada">
+                        <label for="kannada">Kannada</label>
+                        <input type="checkbox" id="hindi" name="hindi" value="hindi">
+                        <label for="hindi">Hindi</label>
+                        <input type="checkbox" id="telgu" name="telgu" value="telgu">
+                        <label for="telgu">Telgu</label>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <input type="checkbox" id="check" name="check" value="check" checked>
+            <label for="check">Hereby I declare all the given details are true</label>
+
+            <p>Log in to <a href="https://www.google.com/">Ethnus</a> Website</p>
+
+            <button onclick="validate()">REGISTER</button>
+        </div>
+    </body>
+
+    <script>
+        function validate() {
+            var a = document.getElementById("fname").value;
+            var b = document.getElementById("lname").value;
+            var c = document.getElementById("email").value;
+            var d = document.getElementById("password").value;
+            var e = document.getElementById("password1").value;
+            var f = document.getElementById("age").value;
+            var g = document.getElementById("address").value;
+            var h = document.getElementById("state").value;
+            var i = document.getElementById("phone").value;
+
+
+
+            if (a == "" && b == "" && c == "" && d == "" && e == "" && f == "" && g == "" && h == "" && i == "") {
+
+                document.getElementById("fname1").innerHTML = "POOR";
+
+                document.getElementById("lname1").innerHTML = "POOR";
+
+                document.getElementById("email1").innerHTML = "POOR";
+
+                document.getElementById("pass1").innerHTML = "POOR";
+
+                document.getElementById("repass1").innerHTML = "POOR or MISMATCH";
+
+                document.getElementById("age1").innerHTML = "POOR";
+
+                document.getElementById("phone1").innerHTML = "POOR";
+
+                document.getElementById("address1").innerHTML = "POOR";
+
+                document.getElementById("state1").innerHTML = "POOR";
+            }
+        }
+    </script>
+</body>
+
+</html>
